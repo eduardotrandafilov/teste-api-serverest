@@ -68,7 +68,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"nome\": \"Maria Teste\",\r\n  \"email\": \"maria.teste6@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+							"raw": "{\r\n  \"nome\": \"Maria Teste\",\r\n  \"email\": \"maria.teste10@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -123,12 +123,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev}}usuarios/dkXw5DQw78wRk8Yd",
+							"raw": "{{dev}}usuarios/dptloIMe9IrC78l",
 							"host": [
 								"{{dev}}usuarios"
 							],
 							"path": [
-								"dkXw5DQw78wRk8Yd"
+								"dptloIMe9IrC78l"
 							]
 						}
 					},
@@ -162,7 +162,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"nome\": \"Maria Teste-Editado\",\r\n  \"email\": \"maria.teste6@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}\r\n",
+							"raw": "{\r\n  \"nome\": \"Maria Teste-Editado\",\r\n  \"email\": \"maria.teste10@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -170,12 +170,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev}}usuarios/dkXw5DQw78wRk8Yd",
+							"raw": "{{dev}}usuarios/dptloIMe9IrC78l",
 							"host": [
 								"{{dev}}usuarios"
 							],
 							"path": [
-								"dkXw5DQw78wRk8Yd"
+								"dptloIMe9IrC78l"
 							]
 						}
 					},
@@ -203,12 +203,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}usuarios/dkXw5DQw78wRk8Yd",
+							"raw": "{{dev}}usuarios/dptloIMe9IrC78ld",
 							"host": [
 								"{{dev}}usuarios"
 							],
 							"path": [
-								"dkXw5DQw78wRk8Yd"
+								"dptloIMe9IrC78ld"
 							]
 						}
 					},
