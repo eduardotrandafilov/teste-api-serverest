@@ -10,209 +10,339 @@
 			"name": "Usuario",
 			"item": [
 				{
-					"name": "Listar usuarios",
-					"event": [
+					"name": "Cenário positivo",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Listar usuários com sucesso\", function () {\r",
-									"     pm.expect(pm.response.text()).to.include(\"usuarios\");  \r",
-									"     pm.expect(pm.response.code).to.equal(200);   \r",
-									"});\r",
-									"\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{dev}}usuarios",
-							"host": [
-								"{{dev}}usuarios"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Cadastrar usuario",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Cadastrar usuário com sucesso\", function () {\r",
-									"     pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");  \r",
-									"     pm.expect(pm.response.code).to.equal(201);   \r",
-									"});\r",
-									"\r",
-									"pm.test(\"Validar mensagem usuario ja cadastrado\", function () {\r",
-									"     pm.expect(pm.response.text()).to.include(\"Este email já está sendo usado\");  \r",
-									"     pm.expect(pm.response.code).to.equal(400);   \r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"nome\": \"Maria Teste\",\r\n  \"email\": \"maria.teste10@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"name": "Listar usuarios",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Listar usuários com sucesso\", function () {\r",
+											"     pm.expect(pm.response.text()).to.include(\"usuarios\");  \r",
+											"     pm.expect(pm.response.code).to.equal(200);   \r",
+											"});\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							}
-						},
-						"url": {
-							"raw": "{{dev}}usuarios",
-							"host": [
-								"{{dev}}usuarios"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Busca usuario por ID",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Buscar usuário com sucesso\", function () {\r",
-									"     pm.expect(pm.response.text()).to.include(\"nome\");  \r",
-									"     pm.expect(pm.response.code).to.equal(200);   \r",
-									"});\r",
-									"\r",
-									"pm.test(\"Validar mensagem usuario não cadastrado\", function () {\r",
-									"     pm.expect(pm.response.text()).to.include(\"Usuário não encontrado\");  \r",
-									"     pm.expect(pm.response.code).to.equal(400);   \r",
-									"});\r",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev}}usuarios",
+									"host": [
+										"{{dev}}usuarios"
+									]
 								}
-							}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "{{dev}}usuarios/dptloIMe9IrC78l",
-							"host": [
-								"{{dev}}usuarios"
-							],
-							"path": [
-								"dptloIMe9IrC78l"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Editar usuario",
-					"event": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Alterar usuário com sucesso\", function () {\r",
-									"     pm.expect(pm.response.text()).to.include(\"Registro alterado com sucesso\");  \r",
-									"     pm.expect(pm.response.code).to.equal(200);   \r",
-									"});\r",
-									"\r",
-									"pm.test(\"Validar mensagem usuario ja cadastrado\", function () {\r",
-									"     pm.expect(pm.response.text()).to.include(\"Este email já está sendo usado\");  \r",
-									"     pm.expect(pm.response.code).to.equal(400);   \r",
-									"});\r",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"nome\": \"Maria Teste-Editado\",\r\n  \"email\": \"maria.teste10@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
+							"name": "Cadastrar usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Cadastrar usuário com sucesso\", function () {\r",
+											"     pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");  \r",
+											"     pm.expect(pm.response.code).to.equal(201);   \r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							}
-						},
-						"url": {
-							"raw": "{{dev}}usuarios/dptloIMe9IrC78l",
-							"host": [
-								"{{dev}}usuarios"
 							],
-							"path": [
-								"dptloIMe9IrC78l"
-							]
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"Maria Teste\",\r\n  \"email\": \"{{$randomEmail}}\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev}}usuarios",
+									"host": [
+										"{{dev}}usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca usuario por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Buscar usuário com sucesso\", function () {\r",
+											"     pm.expect(pm.response.text()).to.include(\"nome\");  \r",
+											"     pm.expect(pm.response.code).to.equal(200);   \r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev}}usuarios/bXZ8ATb55SlfGQ99",
+									"host": [
+										"{{dev}}usuarios"
+									],
+									"path": [
+										"bXZ8ATb55SlfGQ99"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Alterar usuário com sucesso\", function () {\r",
+											"     pm.expect(pm.response.text()).to.include(\"Registro alterado com sucesso\");  \r",
+											"     pm.expect(pm.response.code).to.equal(200);   \r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"Maria Teste-Editado\",\r\n  \"email\": \"Edmond99@gmail.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev}}usuarios/bXZ8ATb55SlfGQ99",
+									"host": [
+										"{{dev}}usuarios"
+									],
+									"path": [
+										"bXZ8ATb55SlfGQ99"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Excluir usuário com sucesso\", function () {\r",
+											"     pm.expect(pm.response.text()).to.include(\"Registro excluído com sucesso\");  \r",
+											"     pm.expect(pm.response.code).to.equal(200);   \r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dev}}usuarios/bXZ8ATb55SlfGQ99",
+									"host": [
+										"{{dev}}usuarios"
+									],
+									"path": [
+										"bXZ8ATb55SlfGQ99"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "Excluir usuario",
-					"event": [
+					"name": "Cenário negativo",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Excluir usuário com sucesso\", function () {\r",
-									"     pm.expect(pm.response.text()).to.include(\"Registro excluído com sucesso\");  \r",
-									"     pm.expect(pm.response.code).to.equal(200);   \r",
-									"});\r",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{dev}}usuarios/dptloIMe9IrC78ld",
-							"host": [
-								"{{dev}}usuarios"
+							"name": "Cadastrar usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Validar mensagem usuario ja cadastrado\", function () {\r",
+											"     pm.expect(pm.response.text()).to.include(\"Este email já está sendo usado\");  \r",
+											"     pm.expect(pm.response.code).to.equal(400);   \r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
 							],
-							"path": [
-								"dptloIMe9IrC78ld"
-							]
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"Maria Teste\",\r\n  \"email\": \"maria.teste10@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev}}usuarios",
+									"host": [
+										"{{dev}}usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca usuario por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Validar mensagem usuario não cadastrado\", function () {\r",
+											"     pm.expect(pm.response.text()).to.include(\"Usuário não encontrado\");  \r",
+											"     pm.expect(pm.response.code).to.equal(400);   \r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev}}usuarios/bXZ8ATb55SlfGQ",
+									"host": [
+										"{{dev}}usuarios"
+									],
+									"path": [
+										"bXZ8ATb55SlfGQ"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Validar mensagem usuario ja cadastrado\", function () {\r",
+											"     pm.expect(pm.response.text()).to.include(\"Este email já está sendo usado\");  \r",
+											"     pm.expect(pm.response.code).to.equal(400);   \r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"Maria Teste-Editado\",\r\n  \"email\": \"maria.teste10@qa.com\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dev}}usuarios/bXZ8ATb55SlfGQ",
+									"host": [
+										"{{dev}}usuarios"
+									],
+									"path": [
+										"bXZ8ATb55SlfGQ"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				}
 			]
 		}
